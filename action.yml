@@ -1,0 +1,17 @@
+# action.yml
+name: 'Environmental Overwrite'
+description: 'Greet someone and record the time'
+inputs:
+  deploymentStage:
+    description: 'The stage being deployed'
+    required: false
+    default: 'dev'
+  repoName:
+    description: 'Name of the repo to get the config of'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.deploymentStage }}
+    - ${{ inputs.repoName }}
