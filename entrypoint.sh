@@ -13,8 +13,8 @@ REPO_NAME=$2
 
 echo "Grabbing $DEPOYMENT_STAGE env file for $REPO_NAME"
 
-ls -lah config/$REPO_NAME
+ls -lah env-config/$REPO_NAME
 
-mv config/$REPO_NAME/.env.$DEPOYMENT_STAGE ./.env
+mv env-config/$REPO_NAME/.env.$DEPOYMENT_STAGE ./.env
 
 ls -lah
